@@ -1,0 +1,101 @@
+.breadcrumb{
+	margin-left: 80px;
+	background: #ffffff;
+	line-height: 15px;
+}
+
+.breadcrumb a.bread1{
+	font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+    font-size: 14px;
+    line-height: 21px;
+    color: #343d42;
+    text-decoration: none;
+}
+
+.breadcrumb a.bread2{
+	font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+    font-size: 14px;
+    color: #999999;
+    line-height: 21px;
+    text-decoration: none;
+}
+
+.nav.nav-pills.no{
+	margin-left: 85px;
+}
+
+.nav.nav-pills.no a{
+	text-decoration: none;
+	padding:10px;
+	font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+    font-size: 14px;
+    line-height: 21px;
+    /*color: #666666;*/
+}
+/*主页面*/
+.home_imgbox{
+	width: 1200px;
+	padding: 10px;
+	margin:0 auto;
+	background: #eeeeee;
+	position: relative;
+	padding-bottom: 30px;
+}
+.box1{
+	background: #ffffff;
+	width:200px; 
+	height:260px; 
+	float: left;
+	margin-right: 17px;
+	margin-left: 17px;
+	box-shadow: 3px 3px 5px #B6B6B6;
+	margin-bottom: 15px;
+}
+.box1:hover{
+	border: 1px solid #eeeeee;
+}
+.box1 .imgg{
+	width:200px;
+	height:140px;
+	border-bottom:2px solid #D8D8D8;
+}
+.box1 .big{
+	margin-top: 5px;
+	margin-left: 10px;
+	text-decoration: none;
+	font-size: 16px;
+	color: #111111;
+	text-align: left;
+	overflow: hidden; /*自动隐藏文字*/
+    text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+    white-space: nowrap;/*强制不换行*/
+}
+.box1 .middle{
+	margin-left: 10px;
+	text-decoration: none;
+	font-size: 12px;
+	color: #777777;
+	text-align: left;
+}
+.box1 .small{
+	margin-left: 10px;
+	text-decoration: none;
+	font-size: 13px;
+	color: #ff0000;
+	text-align: left;
+}
+.lnr.lnr-smile{
+	float: left;
+	margin-left: 10px;
+	color: #5cb85c;
+}
+.lnr.lnr-neutral{
+	float: left;
+	margin-left: 20px;
+	color: #f0ad4e;
+}
+.lnr.lnr-sad{
+	float: left;
+	margin-left: 20px;
+	color: #d9534f;
+}

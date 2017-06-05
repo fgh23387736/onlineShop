@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.js">
+</script>
+<script type="text/javascript" src="/weihang/js/jquery.min.js"></script>
+<script type="text/javascript">
+function testPost(){
+	$.ajax({
+        url: "/yora/src/v1/activity/question.php",
+        type: 'POST',
+        dataType: 'json',
+        data: {
+        	ActivityId:4,
+            Question:'测试问题-冯鈜鉝'
+        },
+        success: function(data,status,xhr) {
+        },
+        error: function(data) {
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+}
+
+function testDelete(){
+	$.ajax({
+        url: "/yora/src/v1/activity/question.php",
+        type: 'DELETE',
+        dataType: 'json',
+        data: {
+        	Type:1,
+        	Search:{
+        		ActivityId:'4'
+        	}
+        },
+        success: function(data,status,xhr) {
+        },
+        error: function(data) {
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+}
+
+function testPut(){
+	$.ajax({
+        url: "/yora/src/v1/activity/question.php",
+        type: 'PUT',
+        dataType: 'json',
+        data: {
+        	Type:0,
+        	Id:'68',
+        	Update:{
+			    Question:'测试问题-李月辉'
+                
+        	}
+        	
+        },
+        success: function(data) {
+        },
+        error: function(data) {
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    })
+}
+
+function testGet(){
+	$.ajax({
+        url: "/yora/src/v1/activity/question.php",
+        type: 'GET',
+        dataType: 'json',
+        data: {
+        	Type:0,
+        	Page:1,
+        	PageSize:10,
+        	Keys:'',
+        	Search:{
+        		Id:''
+        	}
+        },
+        success: function(data,status,xhr) {
+        	console.log(xhr.status);
+        },
+        error: function(data) {
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+}
+
+//testPost();
+//testDelete();
+//testPut();
+//testGet();
+
+</script>

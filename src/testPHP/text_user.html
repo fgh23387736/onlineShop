@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript" src="/yora/js/jquery-3.1.1.min.js">
+</script>
+<!-- <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.js">
+</script> -->
+<script type="text/javascript">
+
+function testPut(){    
+	$.ajax({
+        url: "/yora/src/v1/user/user.php",
+        type: 'PUT',
+        dataType: 'json',
+        data: {
+        	Type:0,
+        	Id:'1',
+        	Update:{
+        		Name:1,
+                NickName:1,
+                HeadImg:'my.jpg',
+                Sex:1,
+                Birthday:'2017-04-02 11:26:08',
+                ProvinceId:1,
+                CityId:1,
+                SchoolId:1,
+                StudentNumber:1,
+                Phone:1
+        	}
+        	
+        },
+        success: function(data) {
+            alert("success");
+            console.log(data);
+        },
+        error: function(data) {
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+
+}
+
+function testGet(){
+	$.ajax({
+        url: "/yora/src/v1/user/user.php",
+        type: 'GET',
+        dataType: 'json',
+        data: {
+        	Type:0,
+        	Page:1,
+        	PageSize:10,
+        	Keys:'Id+'+
+			    'Name+'+
+                'NickName+'+
+                'OpenId+'+
+                'HeadImgUrl+'+
+                'Sex+'+
+                'Birthday+'+
+                'ProvinceId+'+
+                'CityId+'+
+                'SchoolId+'+
+                'Province+'+
+                'City+'+
+                'School+'+
+                'StudentNumber+'+
+                'Phone+',
+        	Search:{
+        		Id:'1+2+3'
+        	}
+        },
+        success: function(data,status,xhr) {
+            alert("success");
+        	console.log(xhr.status);
+            console.log(data);
+        },
+        error: function(data) {
+            alert("error");
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+}
+//testPut();
+testGet();
+
+</script>

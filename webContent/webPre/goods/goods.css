@@ -1,0 +1,141 @@
+.breadcrumb{
+	margin-left: 50px;
+	line-height: 10px;
+}
+.breadcrumb a.bread1{
+	font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+    font-size: 15px;
+    line-height: 21px;
+    color: #343d42;
+    text-decoration: none;
+}
+
+.breadcrumb li.active{
+	font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+    font-size: 15px;
+    color: #999999;
+    line-height: 21px;
+    text-decoration: none;
+}
+.panel.panel-default.no1{
+	width: 1100px;
+	margin: 10px auto 0 auto;
+	
+}
+.panel.panel-default.no2{
+	width: 1100px;
+	margin: 10px auto 0 auto;
+	margin-bottom: 50px;
+}
+.box{
+	background: #ffffff;
+	height:270px; 
+	margin-top: 10px;
+}
+.carousel.slide{
+	float: left;
+}
+.carousel-control.left.Turnpre{
+	position: absolute;
+	top: 115px;
+	left: 3px;
+	width: 30px;
+	height: 30px;
+	
+}
+.carousel-control.right.Turnnext{
+	position: absolute;
+	top: 115px;
+	right: 3px;
+	width: 30px;
+	height: 30px;
+}
+.box .wenzi{
+	float: left;
+	margin-left: 40px;
+}
+.box .big{
+	margin-top: 5px;
+	margin-left: 10px;
+	text-decoration: none;
+	font-size: 30px;
+	color: #111111;
+	text-align: left;
+}
+.box .middle{
+	margin-left: 10px;
+	margin-top: 20px;
+	text-decoration: none;
+	font-size: 12px;
+	color: #777777;
+	text-align: left;
+}
+.box .small{
+	margin-top: 5px;
+	margin-left: 10px;
+	text-decoration: none;
+	font-size: 30px;
+	color: #ff0000;
+	text-align: left;
+}
+.lnr.lnr-smile{
+	float: left;
+	margin-left: 10px;
+	color: #5cb85c;
+}
+.lnr.lnr-neutral{
+	float: left;
+	margin-left: 20px;
+	color: #f0ad4e;
+}
+.lnr.lnr-sad{
+	float: left;
+	margin-left: 20px;
+	color: #d9534f;
+}
+.box .canjia{
+	margin-top: 50px;
+	color: #ffffff;
+	font-size: 25px;
+	height: 40px;
+	width: 160px;
+	background-color: #ff8000;
+	text-align: center;
+	float: left;
+}
+.box .gouwuche{
+	margin-top: 50px;
+	margin-left: 50px;
+	color: #ffffff;
+	font-size: 25px;
+	height: 40px;
+	width: 160px;
+	background-color: #ff8000;
+	text-align: center;
+	float: left;
+}
+
+.nav{ 
+	margin-bottom: 20px;
+	margin-left: 10px;
+	position:relative; 
+	width:1000px; 
+	height:20px; 
+	color:#ffffff; 
+	text-align:center; 
+	bottom:0px;
+}
+.pinglun{
+	margin-bottom: 50px;
+}
+.img1{
+	float: left;
+}
+.user1{
+	float: left;
+}
+.user1 .name1{
+	margin-left: 10px;
+	font-size: 15px;
+	color: #199c3b;
+}

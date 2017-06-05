@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.js">
+</script>
+<script type="text/javascript" src="/weihang/js/jquery.min.js"></script>
+<script type="text/javascript">
+function testPost(){
+	$.ajax({
+        url: "/yora/src/v1/activity/activity.php",
+        type: 'POST',
+        dataType: 'json',
+        data: {
+        	Name:'测试活动1',
+            StartTime:'2017-4-10 10:00:00',
+            EndTime:'2017-4-30 10:00:00',
+            MinNumber:1,
+            MaxNumber:10,
+            Place:'环翠区',
+            ProvinceId:1,
+            CityId:1,
+            SchoolId:1,
+            Introduction:'介绍是空的',
+            Money:100,
+        },
+        success: function(data,status,xhr) {
+        },
+        error: function(data) {
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+}
+
+function testDelete(){
+	$.ajax({
+        url: "/yora/src/v1/activity/activity.php",
+        type: 'DELETE',
+        dataType: 'json',
+        data: {
+        	Type:0,
+        	Search:{
+        		Id:'2'
+        	}
+        },
+        success: function(data,status,xhr) {
+        },
+        error: function(data) {
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+}
+
+function testPut(){
+	$.ajax({
+        url: "/yora/src/v1/activity/activity.php",
+        type: 'PUT',
+        dataType: 'json',
+        data: {
+        	Type:0,
+        	Id:'3',
+        	Update:{
+			    Img:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAALCAYAAACprHcmAAAA/ElEQVQYlU1QAW4DMQgzkNy13TRt79i/94r9qeqk6XbJBQZEVZsIkUi2Maav708jMlBRkBAAxWGAKUBYIbZgNMHl/AGutYLIQcYJMCOwevk/Kui9d4wxwCQMsOB+zCx7wMjmvy6Cfd/ArbVUNuJU9YeDeJaTgrD6dLWOos7kJ1WnJUhoEg1h/sDq6hwjQlnpYSGWzKUDqAobza24tTvw2XMuHL6DS+r4I8ns57GUv6NSWyco+rZtuLycUYQrMLYYOEfTJEkk5FVdaPjyt59f8PV6g0hFoZKBRd4u5rka+qFoXVHLCfufory9vucoR00g6UzBZi4K8XvCUgr+AYLiiclpN/nJAAAAAElFTkSuQmCC',
+    			Name:'测试活动1',
+                StartTime:'2017-4-10 10:00:00',
+                EndTime:'2017-4-30 10:00:00',
+                MinNumber:5,
+                MaxNumber:50,
+                Place:'环翠区',
+                ProvinceId:1,
+                CityId:1,
+                SchoolId:1,
+                Introduction:'这次介绍不是空的',
+                Money:100,
+                Questions:[
+                    {
+                        Id:22,
+                        Question:'问题2'
+                    },
+                    {
+                        Id:23,
+                        Question:'问题2'
+                    },
+                    {
+                        Id:24,
+                        Question:'问题4'
+                    },
+                    {
+                        Id:0,
+                        Question:'问题1'
+                    }
+                ]
+        	}
+        	
+        },
+        success: function(data) {
+        },
+        error: function(data) {
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    })
+}
+
+function testGet(){
+	$.ajax({
+        url: "/yora/src/v1/activity/activity.php",
+        type: 'GET',
+        dataType: 'json',
+        data: {
+        	Type:0,
+        	Page:1,
+        	PageSize:10,
+        	Keys:'',
+        	Search:{
+        		Id:''
+        	}
+        },
+        success: function(data,status,xhr) {
+        	console.log(xhr.status);
+        },
+        error: function(data) {
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+}
+
+//testPost();
+//testDelete();
+//testPut();
+//testGet();
+
+</script>

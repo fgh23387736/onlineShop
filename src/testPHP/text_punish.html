@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript" src="/yora/js/jquery-3.1.1.min.js">
+</script>
+<script type="text/javascript">
+function testPost(){
+	$.ajax({
+        url: "/yora/src/v1/user/punish.php",
+        type: 'POST',
+        dataType: 'json',
+        data: {
+        	UserId:1,
+            StartTime:'1996-10-21 17：00：00',
+            EndTime:'1996-10-22 17：00：00',
+            Reason:'to yound',
+            IsMessage:1
+        },
+        success: function(data,status,xhr) {
+            alert("success");
+            console.log(data);
+        },
+        error: function(data) {
+            alert("error");
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error);
+        }
+    });
+}
+function testDelete(){
+	$.ajax({
+        url: "/yora/src/v1/user/punish.php",
+        type: 'DELETE',
+        dataType: 'json',
+        data: {
+        	Type:0,
+        	Search:{
+        		Id:'12+15'
+        	}
+        },
+        success: function(data,status,xhr) {
+            alert("success");
+            console.log(data);
+        },
+        error: function(data) {
+            alert("error");
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+}
+
+function testPut(){
+	$.ajax({
+        url: "/yora/src/v1/user/punish.php",
+        type: 'PUT',
+        dataType: 'json',
+        data: {
+        	Type:0,
+        	Id:'16',
+        	Update:{
+        		StartTime:'1997-10-25 17:00:00',
+                EndTime:'1997-10-25 17:00:00'
+        	}
+        	
+        },
+        success: function(data) {
+            alert("success");
+            console.log(data);
+        },
+        error: function(data) {
+            alert("error");
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+
+}
+
+function testGet(){
+	$.ajax({
+        url: "/yora/src/v1/user/punish.php",
+        type: 'GET',
+        dataType: 'json',
+        data: {
+        	Type:0,
+        	Page:1,
+        	PageSize:10,
+        	Keys:'Id+'+
+			    'UserId+'+
+			    'AdminId+'+
+			    'StartTime+'+
+			    'EndTime+'+
+			    'Reason+'+
+			    'Time+'
+        		,
+        	Search:{
+        		Id:'16+17'
+                //UserId:'1'
+        	}
+        },
+        success: function(data,status,xhr) {
+            alert("success");
+        	console.log(xhr.status);
+            console.log(data);
+        },
+        error: function(data) {
+            alert("error");
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+}
+
+//testPost();
+//testDelete();
+//testPut();
+testGet();
+
+</script>

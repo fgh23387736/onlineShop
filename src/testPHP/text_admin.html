@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+<body>
+
+</body>
+</html>
+<script type="text/javascript" src="/yora/js/jquery-3.1.1.min.js">
+</script>
+<script type="text/javascript">
+function testPost(){
+	$.ajax({
+        url: "/yora/src/v1/admin/admin.php",
+        type: 'POST',
+        dataType: 'json',
+        data: {
+        	HeadImg:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAXCAYAAAAcP/9qAAAAUklEQVRIie2UsQ0AMAjDGsQLHfv/mVQIdekByQBeGC0PBL5PLAGmkErFrnILi6NZcT+xR9R+vMtC+ccFAKrYUsiWJlNMQ/jHpFB8M9FvMkdM4wIeRgqDN9nY6AAAAABJRU5ErkJggg==',
+		    Username :'#用户名',
+		    Password:'#加密后密码',
+		    Name:'#姓名',
+		    Sex:0,
+		    Birthday:'1996-10-21',
+		    ProvinceId:1,
+            CityId:1,
+            SchoolId:1,
+            Phone:123,
+            Competence:4
+        },
+        success: function(data,status,xhr) {
+            alert("success");
+            console.log(data);
+        },
+        error: function(data) {
+            alert("error");
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error);
+        }
+    });
+}
+
+function testDelete(){
+	$.ajax({
+        url: "/yora/src/v1/admin/admin.php",
+        type: 'DELETE',
+        dataType: 'json',
+        data: {
+        	Type:0,
+        	Search:{
+        		Id:'6'
+        	}
+        },
+        success: function(data,status,xhr) {
+            alert("success");
+            console.log(data);
+        },
+        error: function(data) {
+            alert("error");
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+}
+
+function testPut(){
+	$.ajax({
+        url: "/yora/src/v1/admin/admin.php",
+        type: 'PUT',
+        dataType: 'json',
+        data: {
+            Type:0,
+            Id:'8',
+            Update:{
+            	HeadImg:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAXCAYAAAAcP/9qAAAAUklEQVRIie2UsQ0AMAjDGsQLHfv/mVQIdekByQBeGC0PBL5PLAGmkErFrnILi6NZcT+xR9R+vMtC+ccFAKrYUsiWJlNMQ/jHpFB8M9FvMkdM4wIeRgqDN9nY6AAAAABJRU5ErkJggg==',
+                Username :'#用户名',
+                Password:'#加密后密码',
+                Name:'#姓名',
+                Sex:0,
+                Birthday:'1998-10-23',
+                ProvinceId:1,
+                CityId:1,
+                SchoolId:1,
+                Phone:123,
+                Competence:4
+        	}
+        	
+        },
+        success: function(data) {
+            alert("success");
+            console.log(data);
+        },
+        error: function(data) {
+            alert("error");
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+}
+
+function testGet(){
+	$.ajax({
+        url: "/yora/src/v1/admin/admin.php",
+        type: 'GET',
+        dataType: 'json',
+        data: {
+        	Type:1,
+        	Page:1,
+        	PageSize:10,
+        	Keys:'Id+'+
+			    'HeadImgUrl+'+
+			    'Username+'+
+			    'Name+'+
+			    'Sex+'+
+			    'Birthday+'+
+			    'ProvinceId+'+
+			    'CityId+'+
+			    'SchoolId+'+
+			    'Province+'+
+			    'City+'+
+			    'School+'+
+			    'Phone+'+
+			    'Competence+'
+        		,
+        	Search:{
+        		Id:'',
+                ProvinceId:'',
+                CityId:'',
+                SchoolId:'1'
+        	}
+        },
+        success: function(data,status,xhr) {
+            alert("success");
+        	console.log(xhr.status);
+            console.log(data);
+        },
+        error: function(data) {
+            alert("error");
+            console.log(JSON.parse(data.responseText).Error);
+            alert(JSON.parse(data.responseText).Error)
+        }
+    });
+}
+
+//testPost();
+//testDelete();
+testPut();
+//testGet();
+
+</script>

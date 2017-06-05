@@ -1,0 +1,59 @@
+.Nav_core{
+	width: 1210px;
+	height: 60px;
+	margin: 0px auto;
+	position: relative;
+}
+.Ba_color{
+	background-color: #6E6568
+}
+.Nav_a{
+	position: absolute;
+	left: 230px;
+	top: 0px;
+	line-height: 40px;
+}
+.Nav_a li a{
+	color: white;
+	font-size: 16px;
+}
+.Nav_Search_area{
+	position: absolute;
+	left: 500px;
+	top: 12px;
+}
+.Nav_Div{
+	position: absolute;
+	top: 0px;
+	width: 70px;
+	height:60px;
+	text-align: center;
+	line-height: 60px;
+}
+.Nav_Div a{
+	color: white;
+	display: block;
+	height:  60px;
+}
+
+.Nav_Div a:hover{
+	background-color: #6EBCF8;
+}
+
+.Nav_Div1{
+	right: 295px;
+}
+.Nav_Div2{
+	right: 225px;
+}
+.Nav_Div3{
+	right: 155px;
+}
+.Nav_Div4{
+	right: 85px;
+}
+.Nav_Button{
+	position: absolute;
+	top: 13px;
+	right: 5px;
+}

@@ -1,0 +1,8 @@
+找到php.ini  文件， 把always_populate_raw_post_data  修改为-1 就行了。
+always_populate_raw_post_data=-1
+
+在php.ini中的302行 error_reporting = E_ALL 
+　　修改成 
+　　error_reporting = E_ALL & ~E_NOTICE再重启apache2.2就行了 
+
+date.timezone = "Asia/Shanghai"
